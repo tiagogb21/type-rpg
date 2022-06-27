@@ -1,7 +1,7 @@
 export default class Archetype {
-  private name: string;
-  private special: number;
-  private cost: number;
+  private readonly name: string;
+  private readonly special: number;
+  private readonly cost: number;
   constructor(
     name: string,
   ) {
@@ -9,4 +9,7 @@ export default class Archetype {
     this.special = 0;
     this.cost = 0;
   }
+  static createdArchetypeInstances(): number{
+    throw new Error('Not implemented');
+  };
 }
